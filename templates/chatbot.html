@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Restaurant Reservation and Information {% endblock %}</h1>
+    <form method="post">
+        <label for="request">Hi! I am Cosita, How can I help you?</label>
+        <br>
+        <input type="text" name="request"
+               placeholder="I want to book a table for two in a vegetarian restaurant"
+               value="{{ request.form['question'] }}"></input>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
