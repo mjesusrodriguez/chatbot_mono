@@ -6,7 +6,8 @@ model_engine = setup_openai()
 #Mejora la pregunta realizada, con ChatGPT
 def improveQuestionchatGPT(question):
     # manejar el prompt para que devuelva un json con parámetros faltantes.
-    prompt = "Give me only one alternative question for this one in the scope of restaurant booking: " + question
+    #prompt = "Give me only one alternative question for this one in the scope of restaurant booking: " + question
+    prompt = "Provided the question " + question + " in the scope of restaurant booking, give me only one alternative question"
 
     # Generate a response
     completion = openai.Completion.create(

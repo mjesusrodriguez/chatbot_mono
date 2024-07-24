@@ -36,7 +36,8 @@ def generateQuestionChatGPT(tags):
 
     for tag in tags:
         # Convert the ObjectId to a string before concatenating
-        prompt = "Can you give me an informal question that can be answered with yes or no to understand someone\'s preference regarding a parameter with this tag when selecting a restaurant?: \"" + str(tag) + "\""
+        #prompt = "Can you give me an informal question that can be answered with yes or no to understand someone\'s preference regarding a parameter with this tag when selecting a restaurant?: \"" + str(tag) + "\""
+        prompt = "Provide an informal question that can be answered with yes or no to understand someone's preference regarding a parameter with this tag when selecting a restaurant\"" + str(tag) + "\""
         completion = openai.Completion.create(
             engine=model_engine,
             prompt=prompt,
